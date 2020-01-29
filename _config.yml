@@ -1,1 +1,5 @@
 theme: jekyll-theme-slate
+title: Gravit - A gravity sandbox
+description: Gravit est un sandbox fonctionnant avec la gravité newtonnienne.
+show-downloads: true
+
