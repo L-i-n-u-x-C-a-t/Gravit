@@ -47,9 +47,7 @@ class Simulation(Thread):
         #blit du bg
         self.spacetime.blit(self.bg, (0, 0))
 
-        #setup de l'astre
-        self.obj1 = pygame.Surface((100, 100))
-        pygame.draw.circle(self.obj1, self.rcolor(), (50, 50), 50)
+        self.obj1 = pygame.image.load('pl1.png')
         # 1er affichage
         self.spacetime.blit(self.obj1, (320, 240))
         self.obj1_rect = self.obj1.get_rect()
