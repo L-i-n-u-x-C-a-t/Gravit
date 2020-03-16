@@ -63,6 +63,11 @@ class Simulation(Thread):
                         self.do_stop()
                         pygame.quit()
                         exit(0)
+                        
+                    if event.type == pygame.MOUSEBUTTONUP:  #Onclick
+                        pos = pygame.mouse.get_pos()
+                        if self.obj1_rect.collidepoint(pos):
+                            print("OK")
 
                     if event.type == KEYDOWN:
 
