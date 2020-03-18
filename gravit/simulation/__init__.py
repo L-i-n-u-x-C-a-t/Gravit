@@ -36,6 +36,7 @@ class Simulation(Thread):
 
     def openfile(self):
         openedfile = filedialog.askopenfilename(filetypes = (("png files","*.png"),("all files","*.*")))
+        self.obj1 = pygame.image.load(openedfile)
 
     def run(self):
 
