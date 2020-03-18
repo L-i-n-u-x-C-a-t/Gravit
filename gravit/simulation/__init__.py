@@ -3,7 +3,7 @@
 
 import pygame
 from pygame.locals import *
-
+from tkinter import * 
 from random import randint as r
 from threading import Thread
 
@@ -49,10 +49,10 @@ class Simulation(Thread):
 
         self.obj1 = pygame.image.load('pl1.png')
         # 1er affichage
-        self.spacetime.blit(self.obj1, (320, 240))
-        self.obj1_rect = self.obj1.get_rect()
-
-        self.do_play()
+        self.spacetime.blit(self.obj1, (320, 240)) 
+        self.obj1_rect = self.obj1.get_rect()       
+                                                    
+        self.do_play()                             
         #boucle de jeu
         while not self.stop:
             while self.play:
@@ -63,11 +63,17 @@ class Simulation(Thread):
                         self.do_stop()
                         pygame.quit()
                         exit(0)
-                        
-                    if event.type == pygame.MOUSEBUTTONUP:  #Onclick
-                        pos = pygame.mouse.get_pos()
-                        if self.obj1_rect.collidepoint(pos):
-                            print("OK")
+
+                    if event.type == pygame.MOUSEBUTTONUP:  #click on mouse
+                        pos = pygame.mouse.get_pos()        #get mouse position
+                        if self.obj1_rect.collidepoint(pos):    #if mouse collides with the object
+                            edit = Tk()         
+                            edit.geometry("300x500")
+                            label = Label(edit, text='OK')
+                            label.pack()
+                            skinchange = Button(edit, text = "browse for a skin...")
+                            skinchange.pack()
+                            edit.mainloop()
 
                     if event.type == KEYDOWN:
 
@@ -110,6 +116,8 @@ class Simulation(Thread):
             pygame.display.flip()
 
             self.fps_clock.tick(self.FPS)
+            pygame.quit()
+            exit(0)
 
 
 if __name__=="__main__":
