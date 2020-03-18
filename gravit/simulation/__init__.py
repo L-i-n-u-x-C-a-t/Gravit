@@ -3,7 +3,10 @@
 
 import pygame
 from pygame.locals import *
+
 from tkinter import * 
+from tkinter import filedialog
+
 from random import randint as r
 from threading import Thread
 
@@ -30,6 +33,9 @@ class Simulation(Thread):
 
         self.FPS = FPS
         self.win_size = win_size
+
+    def openfile(self):
+        openedfile = filedialog.askopenfilename(filetypes = (("png files","*.png"),("all files","*.*")))
 
     def run(self):
 
@@ -71,7 +77,7 @@ class Simulation(Thread):
                             edit.geometry("300x500")
                             label = Label(edit, text='OK')
                             label.pack()
-                            skinchange = Button(edit, text = "browse for a skin...")
+                            skinchange = Button(edit, text = "browse for a skin...", command = self.openfile)
                             skinchange.pack()
                             edit.mainloop()
 
