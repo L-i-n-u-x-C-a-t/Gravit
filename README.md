@@ -7,7 +7,27 @@
 
 #### tryin to put skins 
 
-### dependencis : pygame, tk, os
+### dependencies : 
+### Tkinter:
+
+default installed on windows.
+
+#### Ubuntu/Debian/Mint: 
+`sudo apt-get install python3-tk`
+
+### Pygame:
+
+#### Windows:
+`python3 -m pip install -U pygame --user`
+or
+`py -m pip install -U pygame --user`
+
+#### Ubuntu/Debian/Mint:
+`sudo apt-get install python3-pygame`
+
+#### Fedora/RedHat:
+`sudo apt-get install python3-pygame`
+
 
 #### Licence :
 
