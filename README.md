@@ -7,6 +7,8 @@
 
 #### tryin to put skins 
 
+### dependencis : pygame, tk, os
+
 #### Licence :
 
 © 2020 Gravit contributors 
