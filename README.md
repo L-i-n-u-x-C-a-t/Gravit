@@ -5,7 +5,7 @@
 
 
 
-#### Lastest version : v0.2-beta
+#### Lastest version : v0.2bf-beta
 
 #### tryin to put skins 
 
